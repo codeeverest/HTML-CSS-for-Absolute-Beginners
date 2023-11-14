@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Logo</title>
+    <!-- Adding internal CSS -->
+    <style>
+        .youtube{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            background-color: red;
+            color: white;
+            border-radius: 49%/11%;
+            text-align: center;
+            text-indent: 0.1rem;
+        }
+
+        .youtube:before{
+            content:'';
+            position: absolute;
+            top: 10%;
+            bottom: 10%;
+            right: -5%;
+            left: -5%;
+            background: inherit;
+            border-radius: 5%/50%;
+        }
+
+        /* to style the triangle inside the logo */
+        .triangle{
+            position: absolute;
+            height: 0;
+            width: 0;
+            border-radius: 0;
+            left: 40%;
+            top: 30%;
+            border-top: 28px solid transparent;
+            border-bottom: 28px solid transparent;
+            border-left: 56px solid white;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Creating empty divs for logo creation -->
+    <div class="youtube">
+        <div class="triangle"></div>
+    </div>
+</body>
+</html>
