@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Logo</title>
+    <!-- Adding internal CSS -->
+    <style>
+        .body{
+            margin : 40px 70px;
+        }
+
+        /* for the circular part  */
+        .google{
+            width:200px;
+            height:200px;
+            background: conic-gradient(
+                #db4437 0deg,
+                #db4437 60deg,
+                #4285f4 60deg,
+                #4285f4 135deg,
+                #0f9d58 135deg,
+                #0f9d58 240deg,
+                #f48400 240deg,
+                #f48400 300deg,
+                #db4437 300deg
+            );
+            border-radius: 50%;
+            display: block;
+        }
+
+        .google:before{
+            content:'';
+            display: block;
+            width: 120px;
+            height: 120px;
+            background: white;
+            position: relative;
+            top: 40px;
+            left: 40px;
+            border-radius: 50%;
+        }
+
+        .google:after{
+            content:'';
+            display: block;
+            width: 80px;
+            height: 40px;
+            background: #4285f4;
+            position: relative;
+            top: -40px;
+            left: 100px;
+        }
+
+        /* for the horizontal line */
+        .cut{
+            width: 0;
+            height: 0;
+            border-left: 86px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid gray;
+            position: relative;
+            top: -220px;
+            left: 118px;
+            border-bottom:100px solid white;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="google"></div>
+    <div class="cut"></div>
+</body>
+</html>
