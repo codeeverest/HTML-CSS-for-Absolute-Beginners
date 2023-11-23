@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Hover Effect</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .button-container{
+            text-align: center;
+        }
+
+        .hover-effect{
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .hover-effect:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #2980b9;
+            z-index: -1;
+            transform: scaleY(0);
+            transform-origin: 50% 100%;
+            transition: tranform 0.3s ease;
+        }
+
+        .hover-effect:hover{
+            color: #3498db;
+            background-color: #ffffff;
+            border: 2px solid #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="hover-effect">Hover Me</button>
+    </div>
+</body>
+</html>
