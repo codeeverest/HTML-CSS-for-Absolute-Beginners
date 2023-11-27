@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Logo</title>
+    <!-- internal css -->
+    <style>
+        /* font style imported from google fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .linkedin-logo{
+            width: 100px;
+            height: 100px;
+            background-color: #0077B5;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .linkedin-logo:after{
+            content: 'in';
+            position: absolute;
+            color: white;
+            font-size: 64px;
+            font-weight: bolder;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="linkedin-logo"></div>
+</body>
+</html>
