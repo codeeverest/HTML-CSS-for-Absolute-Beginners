@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Chrome Logo</title>
+    <style>
+        .chrome{
+            position: absolute;
+            top: 35%;
+            left: 40%;
+            width: 210px;
+            height: 210px;
+            border-radius: 50%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background-color: #4c88f5;
+            border-radius: 50%;
+            z-index: 4;
+            border: 10px solid white;
+
+        }
+
+        .red{
+            position: absolute;
+            top: 0;
+            left: 34px;
+            width: 200px;
+            height: 80px;
+            background-color: #DD5144;
+        }
+
+        .red::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100px;
+            width: 200px;
+            height: 65px;
+            background-color: #DD5144;
+            transform: rotate(60deg);
+        }
+
+        .yellow{
+            position: absolute;
+            top: 131px;
+            left: 56px;
+            width: 200px;
+            height: 80px;
+            background-color: #FFCD46;
+            transform: rotate(120deg);
+        }
+
+        .yellow::before{
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: -93px;
+            width: 200px;
+            height: 65px;
+            background-color: #FFCD46;
+            transform: rotate(60deg);
+        }
+
+        .green{
+            position: absolute;
+            top: 88px;
+            left: -74px;
+            width: 200px;
+            height: 80px;
+            background-color: #1DA462;
+            transform: rotate(-120deg);
+        }
+
+        .green::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -90px;
+            width: 200px;
+            height: 65px;
+            background-color: #1DA462;
+            transform: rotate(60deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="chrome">
+        <div class="center"></div>
+        <div class="red"></div>
+        <div class="yellow"></div>
+        <div class="green"></div>
+    </div>
+</body>
+</html>
