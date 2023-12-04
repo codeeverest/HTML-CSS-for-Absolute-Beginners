@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Button Effect</title>
+    <!-- Add internal CSS -->
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            /* to add gradient effect in the background */
+            background: linear-gradient(#141e30, #3c005a);
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        a{
+            position: absolute;
+            display: inline-block;
+            padding: 10px 20px;
+            color: #d580ff;
+            font-size: 16px;
+            text-decoration: none;
+            overflow: hidden;
+            transition: 0.5s;
+            top: 45%;
+            left: 45%;
+            letter-spacing: 4px;
+        }
+
+        /* to add hover effects */
+        a:hover{
+            background: #d580ff;
+            color: #fff;
+            font-weight: bolder;
+            border-radius: 5px;
+            /* to add box shadow with blurred effect (neon resemblance) */
+            box-shadow: 0 0 5px #d580ff, 0 0 25px #d580ff, 0 0 50px #d580ff, 0 0 100px #d580ff;
+        }
+
+        a span{
+            position: absolute;
+            display: block;
+        }
+
+        /* left border of button */
+        a span:nth-child(1){
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #d580ff);
+            animation: left-animation 1s linear infinite;
+        }
+
+        @keyframes left-animation {
+            0%{
+                left: -100%;
+            }
+            50%,
+            100%{
+                left: 100%;
+            }
+        }
+
+        /* top border of button */
+        a span:nth-child(2){
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #d580ff);
+            animation: top-animation 1s linear infinite;
+            /* animation delay is added to give effect of flow */
+            animation-delay: 0.25s;
+        }
+
+        @keyframes top-animation {
+            0%{
+                top: -100%;
+
+            }
+            50%,
+            100%{
+                top: 100%;
+            }
+        }
+
+        /* right border of button */
+        a span:nth-child(3){
+            bottom: 0;
+            right: 100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(270deg, transparent, #d580ff);
+            animation: right-animation 1s linear infinite;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes right-animation {
+            0%{
+                right: -100%;
+            }
+            50%,
+            100%{
+                right: 100%;
+            }
+        }
+
+        /* bottom border of button */
+        a span:nth-child(4){
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, #d580ff);
+            animation: bottom-animation 1s linear infinite;
+            animation-delay: 0.75s;
+        }
+
+        @keyframes bottom-animation {
+            0%{
+                bottom: -100%;
+            }
+            50%,
+            100%{
+                bottom: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        SUBMIT
+    </a>
+</body>
+</html>
